@@ -6,70 +6,44 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Student
+    class Program
     {
-        public static void Main(string[] args);
-public string name;
-
-        public string GetName()
+        static void Main(string[] args)
         {
-            return name;
-        }
-
-        public void SetName(string value)
-        {
-            name = value;
-        }
-
-        public int fruits { get; set; }
-
-    }
-
-
-
-    public static void Main(string[] args)
-    {
-        //Your code goes here
-        //Console.WriteLine("Hello, world!");
-
-        Student s = new Student() { Set SetName("Ivy"), fruits = "Apple" };
-        Student s1 = new Student() { Set SetName("Ryan"), fruits = "Banana" };
-        Student s2 = new Student() { Set SetName("Ron"), fruits = "Orange" };
-        Student s3 = new Student() { Set SetName("Melvin"), fruits = "Kiwi" };
-        Student s4 = new Student() { Set SetName("Sara"), fruits = "Pineapple" };
-
-
-
-        List<Student> list = new List<Student>();
-        list.Add(s);
-        list.Add(s1);
-        list.Add(s2);
-        list.Add(s3);
-        list.Add(s4);
-
-
-
-
-        int[] studentCount = new int[100];
-
-        foreach (Student l in list)
-        {
-
-            int index = l.fruits - "banana";
-            studentCount[index] = studentCount[index] + 1;
-
-        }
-
-        int[] sortedAgeList = new int[list.Count()];
-
-        int currentAge = 0;
-        foreach (int i in studentCount)
-        {
-            currentAge++;
-
-            if (i != 0)
-                for (int r = 0; r < i; r++)
-                    Console.WriteLine(currentfruits);
+            int r, m1, m2, m3, t;
+            float p;
+            string n;
+            Console.WriteLine("Enter Roll Number :");
+            r = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Student Name :");
+            n = Console.ReadLine();
+            Console.WriteLine("Mark of Subject1 : ");
+            m1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Mark of Subject2 : ");
+            m2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Mark of Subject3 : ");
+            m3 = Convert.ToInt32(Console.ReadLine());
+            t = m1 + m2 + m3;
+            p = t / 3.0f;
+            Console.WriteLine("Total : " + t);
+            Console.WriteLine("Percentage : " + p);
+            if (p >= 35 && p < 50)
+            {
+                Console.WriteLine("Grade is C");
+            }
+            if (p >= 50 && p <= 60)
+            {
+                Console.WriteLine("Grade is B");
+            }
+            if (p > 60 && p <= 80)
+            {
+                Console.WriteLine("Grade is A");
+            }
+            if (p > 80 && p <= 100)
+            {
+                Console.WriteLine("Grade is A+");
+            }
+            Console.ReadLine();
         }
     }
-            
+}
